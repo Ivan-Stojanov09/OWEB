@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: bisque;
+    text-align: center;
+    margin-top: 25px;
+}
+
+h2 {
+    color: brown;
+}
+
+#tabla {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: azure;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 2em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card.flipped {
+    background-color: rgb(175, 232, 175);
+}
+
+#tries {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: brown;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    font-weight: 600;
+}
+
+#message {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: rgb(123, 222, 123);
+    font-weight: bold;
+}
