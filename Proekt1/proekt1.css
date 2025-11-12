@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+  margin: 0;
+  background: darkred;
+  color: #333;
+}
+
+header {
+  background: darkred;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
+
+nav{
+    background-color: brown;
+    padding:10px;
+}
+nav ul {
+  color:brown;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+}
+
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+.hero {
+  background-image: url('images/bg-image.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.gallery {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery img {
+    width: 400px;   
+    height: 300px;  
+    object-fit: cover;
+    border: #333;
+}
+
+
+
+.actions button {
+  margin: 5px;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 30px auto;
+  gap: 10px;
+}
+
+footer {
+  background: darkred;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.blog-container{
+  background-color: white;  
+  padding: 30px;            
+  border-radius: 10px;     
+  max-width: 800px;         
+  margin: 40px auto;        
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+  color: black;
+}
+
+.form-container{
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  color: black;
+}
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  color: black;
+  text-align: center;
+}
+
+
+.login-container input[type=text],
+.login-container input[type=password] {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+.login-container button {
+  background-color: #8B4513; 
+  color: white;
+  padding: 12px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 95%;
+  transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #A0522D; 
+}
+
+
+#loginMessage {
+  margin-top: 15px;
+  font-weight: bold;
+}
+.form-row {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.form-row label {
+  flex: 1;              
+  margin-right: 20px;   
+}
+
+.options input {
+  margin-right: 5px;    
+}
