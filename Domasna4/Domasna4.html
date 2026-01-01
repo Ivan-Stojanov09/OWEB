@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>3 Input Table Filter</title>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#f5f5f5;
+        padding:30px;
+    }
+    input{
+        margin:5px 0;
+        padding:10px;
+        width:300px;
+        display:block;
+        font-size:16px;
+    }
+    table{
+        width:60%;
+        border-collapse: collapse;
+        background:white;
+        margin-top:15px;
+    }
+    th, td{
+        border:1px solid #ccc;
+        padding:10px;
+        text-align:left;
+    }
+    th{
+        background:#e3e3e3;
+    }
+</style>
+
+</head>
+<body>
+
+<h2>Filter Table Using 3 Search Inputs</h2>
+
+<input id="input1" type="text" placeholder="Search filter 1...">
+<input id="input2" type="text" placeholder="Search filter 2...">
+<input id="input3" type="text" placeholder="Search filter 3...">
+
+<table id="myTable">
+<tr><th>Name</th><th>Country</th><th>Job</th></tr>
+<tr><td>Ivan</td><td>Macedonia</td><td>Developer</td></tr>
+<tr><td>Marco</td><td>Italy</td><td>Chef</td></tr>
+<tr><td>Sarah</td><td>USA</td><td>Designer</td></tr>
+<tr><td>Anna</td><td>Germany</td><td>Engineer</td></tr>
+<tr><td>Petar</td><td>Macedonia</td><td>Teacher</td></tr>
+</table>
+
+<script>
+$(document).ready(function(){
+
+  function filterTable(){
+    var v1 = $("#input1").val().toLowerCase();
+    var v2 = $("#input2").val().toLowerCase();
+    var v3 = $("#input3").val().toLowerCase();
+
+    $("#myTable tr").filter(function(index) {
+
+      if(index === 0) return;
+
+      var rowText = $(this).text().toLowerCase();
+
+      $(this).toggle(
+        rowText.indexOf(v1) > -1 &&
+        rowText.indexOf(v2) > -1 &&
+        rowText.indexOf(v3) > -1
+      );
+    });
+  }
+
+  $("#input1, #input2, #input3").on("keyup", filterTable);
+
+});
+</script>
+
+</body>
+</html>
