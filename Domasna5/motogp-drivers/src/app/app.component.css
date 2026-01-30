@@ -1,0 +1,79 @@
+/* Page */
+.container {
+  max-width: 950px;
+  margin: 24px auto;
+  padding: 0 16px;
+  font-family: Arial, sans-serif;
+  color: #111;
+}
+
+/* Layout: list left, details right */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+h1 {
+  grid-column: 1 / -1;
+  margin: 0 0 8px;
+  font-size: 26px;
+}
+
+/* List */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.item {
+  padding: 12px 14px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+
+.item:hover {
+  background: #f7faff;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item.active,
+.active {
+  background: #eaf2ff;
+  border-left: 4px solid #1976d2;
+}
+
+/* Details card */
+.card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.img {
+  width: 100%;
+  max-width: 360px;
+  display: block;
+  border-radius: 10px;
+  margin: 10px 0 12px;
+}
+
+p {
+  margin: 8px 0;
+}

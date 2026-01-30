@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+
+  <ul class="list">
+    <li
+      *ngFor="let d of drivers"
+      class="item"
+      (click)="selectDriver(d.id)"
+      [class.active]="d.id === selectedId"
+    >
+      {{ d.name }} — {{ d.team }}
+    </li>
+  </ul>
+
+  <div class="card" *ngIf="selectedDriver as d">
+    <h2>{{ d.name }}</h2>
+    <img class="img" [src]="d.iconUrl" alt="driver" />
+    <p><b>Team:</b> {{ d.team }}</p>
+    <p><b>Category:</b> {{ d.category }}</p>
+    <p><b>Points:</b> {{ d.points }}</p>
+  </div>
+</div>
