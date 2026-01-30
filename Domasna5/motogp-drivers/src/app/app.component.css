@@ -7,7 +7,7 @@
   color: #111;
 }
 
-/* Layout: list left, details right */
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -27,7 +27,7 @@ h1 {
   font-size: 26px;
 }
 
-/* List */
+
 .list {
   list-style: none;
   padding: 0;
@@ -58,7 +58,7 @@ h1 {
   border-left: 4px solid #1976d2;
 }
 
-/* Details card */
+
 .card {
   background: #fff;
   border: 1px solid #e6e6e6;
